@@ -1,0 +1,13 @@
+
+fastapi
+uvicorn
+python-multipart
+streamlit
+google-generativeai
+requests
+beautifulsoup4
+PyPDF2
+python-docx
+pillow
+pytesseract
+python-jose
