@@ -1,0 +1,31 @@
+THE CONSUMER PROTECTION ACT, 2019
+
+The Consumer Protection Act, 2019 marks a major overhaul to the previous 1986 Act, specifically updated to handle the modern digital economy, e-commerce platforms, product liability, and fast-track dispute resolutions in India.
+
+Key Features & Provisions:
+
+1. Definition of a Consumer:
+A consumer is any person who buys any goods, whether through offline or online transactions, electronic means, teleshopping, direct selling, or multi-level marketing. It explicitly excludes individuals who obtain goods for free or for commercial resale/manufacturing.
+
+2. Central Consumer Protection Authority (CCPA):
+Section 10 establishes the CCPA. The CCPA has the power to initiate class action suits, order recalls of dangerous goods, order reimbursement of the price, and impose heavy penalties for misleading advertisements. It functions as a regulatory body to promote, protect, and enforce the rights of consumers as a class.
+
+3. Product Liability (Section 82):
+A manufacturer, product service provider, or product seller will now be held directly responsible to compensate for injury or damage caused by defective products or deficient services. E-commerce platforms can be held liable if they fail to provide adequate safeguards.
+
+4. E-Commerce Rules & Accountability:
+E-commerce platforms are explicitly banned from adopting unfair trade practices. They must acknowledge the receipt of any consumer complaint within 48 hours and redress the complaint within a month from the date of receipt. Details of sellers (name, contact, address) must be displayed transparently on the platform.
+
+5. Penalties for Misleading Ads (Section 21/89):
+The CCPA can impose penalties up to Rs. 10 Lakhs on manufacturers or endorsers (including celebrities/influencers) for false or misleading advertisements. Repeat offenses can incur fines up to Rs. 50 Lakhs and prohibition from endorsing any product for up to 3 years.
+
+6. Consumer Disputes Redressal Commissions (CDRC):
+Pecuniary limits for filing cases have been significantly expanded:
+- District Commission: Claims up to Rs. 1 Crore.
+- State Commission: Claims between Rs. 1 Crore to Rs. 10 Crore.
+- National Commission: Claims above Rs. 10 Crore.
+
+7. Mediation and E-Filing (Section 35 & 37):
+Consumers can file complaints electronically (e-Daakhil) without needing to hire a lawyer to represent them physically in other states. Furthermore, the Act provides for an Alternate Dispute Resolution (ADR) mechanism specifically via mediation cells attached to the consumer courts to prevent prolonged litigation.
+
+Timeline Requirements: Unfair contracts are thoroughly outlawed, and disputes are legally obligated to be settled within 3 to 5 months based on whether product testing is required.

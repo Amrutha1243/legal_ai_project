@@ -1,0 +1,37 @@
+MODEL TENANCY ACT (MTA), 2021 & RENT CONTROL OVERVIEW
+
+The Model Tenancy Act (MTA) 2021 was approved by the Union Cabinet of India to completely overhaul the archaic rental laws previously dominated by state-level Rent Control Acts (like the Delhi Rent Control Act, 1958). The fundamental goal is to balance the interests of landlords and tenants, create an accountable framework, and institutionalize the rental housing market.
+
+Core Provisions and Rules:
+
+1. Mandatory Written Agreements (Section 4):
+Oral agreements are no longer valid. All premises, whether residential or commercial, can only be rented out after executing a written rent agreement on mutually agreed terms. This contract must be submitted to the localized Rent Authority within two months.
+
+2. Capping Security Deposits (Section 11):
+To prevent landlord extortion, the MTA officially caps the security deposit a landlord can demand:
+- Residential properties: Maximum of TWO (2) months' rent.
+- Non-residential/Commercial properties: Maximum of SIX (6) months' rent.
+The deposit must be refunded sequentially at the time of vacating the premises.
+
+3. Restricting Arbitrary Evictions (Part V):
+A tenant cannot be evicted arbitrarily during the tenancy period. Eviction can only be initiated on specified grounds:
+- Failure to pay rent for two consecutive months.
+- Misuse of premises for illegal activities.
+- Structural alteration of the property without written consent from the landlord.
+- Sub-letting the property without the landlord's explicit pre-approval.
+
+4. Penalties for Overstaying (Section 23):
+If a tenant refuses to vacate the premises after the tenancy period expires, they must pay significantly enhanced rent:
+- Double the monthly rent for the first two months.
+- Four times the monthly rent for any subsequent months.
+
+5. Landlord Obligations regarding Basic Amenities:
+No landlord is permitted to withhold essential services (water, electricity, ventilation, or sanitary services) to coerce a tenant, even if the tenant is in rent default. Doing so gives the tenant the legal right to approach the Rent Authority for immediate restoration orders.
+
+6. Property Maintenance Responsibilities (Section 15):
+Unless specifically modified in the rent agreement, routine maintenance (e.g., changing tap washers, drain cleaning, socket repairs) falls strictly on the tenant. Conversely, structural repairs (pipe replacements, major electrical wiring, whitewashing) fall strictly on the landlord.
+
+7. Rent Authorities, Courts, and Tribunals (Part VII):
+To ensure speedy justice, states will establish independent Rent Authorities, Rent Courts, and Rent Tribunals. Civil courts will no longer have jurisdiction over rental disputes governed by MTA. All disputes must be resolved within 60 days of filing.
+
+Applicability: The Model Tenancy Act operates prospectively, meaning it does not disrupt existing lease agreements indefinitely, but will apply to all new agreements signed after the state's adoption of the law.

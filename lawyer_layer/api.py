@@ -1,4 +1,5 @@
-from fastapi import FastAPI, UploadFile, File, Form, Depends, HTTPException
+from fastapi import FastAPI, UploadFile, File, Form, Depends, HTTPException, BackgroundTasks, APIRouter
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordRequestForm
 from datetime import datetime, timedelta
@@ -6,19 +7,32 @@ from jose import JWTError, jwt
 from passlib.context import CryptContext
 import shutil
 import os
+import re
+import uuid
+from gtts import gTTS
+from pydantic import BaseModel
+from pymongo import MongoClient
+import certifi
 
 from extractor import extract_text
 from answers import generate_legal_answer
 from google_cases import search_google_cases
 from questions import format_qa
-from fastapi import APIRouter
 
 router = APIRouter()
 
 # =========================
+# MONGODB CONNECTION (SHARED)
+# =========================
+MONGO_URL = "mongodb+srv://Amrutha_1243:Amrutha%401243@legalai.rvs8uff.mongodb.net/?retryWrites=true&w=majority"
+client = MongoClient(MONGO_URL, tlsCAFile=certifi.where())
+db = client["legal_ai"]
+handoff_collection = db["handoff_cases"]
+
+# =========================
 # JWT SETTINGS
 # =========================
-SECRET_KEY = "supersecretkey"
+SECRET_KEY = os.getenv("JWT_SECRET_KEY", "supersecretkey")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
@@ -95,19 +109,11 @@ def login(form_data: OAuth2PasswordRequestForm = Depends()):
 # =========================
 @router.post("/upload/")
 async def upload_document(
+    background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
     token: str = Depends(lambda: None)
 ):
-    # Save file (optional)
-    file_path = os.path.join(UPLOAD_DIR, file.filename)
-
-    with open(file_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
-
-    # 🔥 IMPORTANT: reset pointer after saving
-    file.file.seek(0)
-
-    # ✅ Correct call
+    # Simply extract the text instantly
     text = extract_text(file)
 
     return {
@@ -121,33 +127,33 @@ async def upload_document(
 # =========================
 @router.post("/analyze/")
 async def analyze_document(
-    api_key: str = Form(...),
     context: str = Form(...),
-    question: str = Form(...)
+    question: str = Form(...),
+    api_key: str = Form(None)
 ):
-    answer = generate_legal_answer(api_key, context, question)
-    cases = search_google_cases(question)
+    # FORCE load from env directly to prevent frontend 'undefined' strings overriding the key.
+    secure_api_key = os.getenv("GEMINI_API_KEY")
+    if not secure_api_key:
+        print("CRITICAL: GEMINI_API_KEY IS NOT SET IN THE ENVIRONMENT!")
+        
+    print(f"Executing Gemini with key starting with: {str(secure_api_key)[:5]}... and context length: {len(context)}")
+    
+    # Web Scraper triggers native firewall blocks on 202/403. 
+    # Re-enable the case law programmatic search via DDGS
+    answer = generate_legal_answer(secure_api_key, context, question)
+    cases = search_google_cases(question) 
     formatted = format_qa(question, answer, cases)
 
     return {
         "analysis": formatted
     }
 
-from fastapi import APIRouter
-from fastapi.responses import FileResponse
-from gtts import gTTS
-from pydantic import BaseModel
-import uuid
-
-# router = APIRouter()
-
 class TTSRequest(BaseModel):
     text: str
     lang: str
-import re
 
 @router.post("/tts/")
-async def generate_audio(req: TTSRequest):
+async def generate_audio(req: TTSRequest, background_tasks: BackgroundTasks):
     try:
         filename = f"audio_{uuid.uuid4().hex}.mp3"
 
@@ -158,9 +164,29 @@ async def generate_audio(req: TTSRequest):
         tts = gTTS(text=text, lang=req.lang)
         tts.save(filename)
 
-        return FileResponse(filename, media_type="audio/mpeg")
+        background_tasks.add_task(os.remove, filename)
+        return FileResponse(filename, media_type="audio/mpeg", background=background_tasks)
 
     except Exception as e:
         print("TTS ERROR:", e)
         raise HTTPException(status_code=500, detail=str(e))
 
+# =========================
+# 📥 FETCH CLIENT HANDOFFS 
+# =========================
+@router.get("/handoffs/")
+def get_client_handoffs():
+    # Fetch all handoffs from the MongoDB, sorted by newest first
+    try:
+        cases = list(handoff_collection.find().sort("created_at", -1).limit(50))
+        
+        # Format the ObjectId so it can be serialized to JSON
+        for case in cases:
+            case["_id"] = str(case["_id"])
+            if "created_at" in case:
+                case["created_at"] = str(case["created_at"])
+                
+        return {"status": "success", "total": len(cases), "handoffs": cases}
+    except Exception as e:
+        print("Error fetching handoffs:", e)
+        raise HTTPException(status_code=500, detail="Failed to retrieve handoffs")

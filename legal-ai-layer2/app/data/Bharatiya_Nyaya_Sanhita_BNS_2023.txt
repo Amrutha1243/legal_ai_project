@@ -1,0 +1,36 @@
+BHARATIYA NYAYA SANHITA (BNS) 2023 - COMPREHENSIVE OVERVIEW
+
+The Bharatiya Nyaya Sanhita (BNS), 2023 is the criminal code of India, passed to replace the older Indian Penal Code (IPC), 1860. It aims to modernize, simplify, and expedite criminal justice in India by removing archaic definitions, implementing community service, and specifically targeting new forms of crime.
+
+Key Provisions and Changes from IPC:
+
+1. Repeal of Sedition (Section 124A IPC):
+The offense of "sedition" has been completely removed. It has been replaced by Section 152 of the BNS, which penalizes acts endangering the sovereignty, unity, and integrity of India, specifically targeting armed rebellion, subversive activities, and separatist activities. 
+
+2. Organized Crime (Section 111 BNS):
+For the first time, organized crime has been defined under a general law. Section 111 penalizes kidnapping, extortion, contract killing, land grabbing, financial scams, and cybercrime run by a syndicate. The punishment ranges from life imprisonment (or death) in severe cases to imprisonment of 5 years or more.
+
+3. Terrorism (Section 113 BNS):
+Terrorist acts are explicitly defined and integrated into the general criminal code rather than solely relying on specialized acts like UAPA. It covers acts that threaten the unity, integrity, and security of India or intimidate the general public.
+
+4. Mob Lynching (Section 103 BNS):
+Murder committed by a group of five or more persons on the grounds of race, caste, community, sex, place of birth, language, or personal belief is specifically penalized with life imprisonment or death.
+
+5. Sexual Offenses Against Women and Children:
+- Gang rape of a minor under 18 years is punishable by life imprisonment or death.
+- Deceitful Sexual Relations: Section 69 specifically criminalizes sexual intercourse under the false promise of marriage, employment, or promotion, without constituting it as rape.
+- Identity concealment for marriage is formally recognized as an offense.
+
+6. Community Service as Punishment:
+BNS formally introduces "Community Service" as a non-custodial punishment for petty offenses, focusing on restorative justice rather than punitive detention. Examples of offenses where this can be applied include minor theft, public intoxication, and criminal defamation.
+
+7. Hit and Run Legislation (Section 106 BNS):
+Causing death by rash and negligent driving and fleeing the scene without reporting the incident to police/magistrate is heavily penalized to deter fatal accidents and absconding. Punishment can escalate to 10 years and a serious fine.
+
+8. Snatching (Section 304 BNS):
+"Snatching" (theft of an item from an individual forcefully, like a purse or phone) is introduced as a distinct offense separate from standard theft or robbery, given the high frequency of such crimes in urban areas.
+
+9. Electronic and Digital Records:
+BNS legally integrates electronic communications, SMS, emails, and server logs as valid forms of evidence in a court of law to combat the rise of digital and cybercrimes.
+
+Implementation: The Act emphasizes victim-centric approaches, ensures speedy trials via standardized timelines, and heavily utilizes digital procedures for filing FIRs and evidence collection.
